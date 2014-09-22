@@ -1,7 +1,25 @@
 #include "RGTask.h"
+#include <QDebug>
 
 RGTask::RGTask()
 {
+}
+
+RGTask::RGTask(const QString& strGuid, const QString& strName, RGTaskType type,
+               RGTaskCycle cycle, int nDoneScore, int nFailedScore)
+    : m_guid(strGuid)
+    , m_name(strName)
+    , m_type(type)
+    , m_cycle(cycle)
+    , m_doneScore(nDoneScore)
+    , m_failedScore(nFailedScore)
+{
+
+}
+
+RGTask::~RGTask()
+{
+    qDebug() << "~RGTask guid : " << m_guid;
 }
 
 RGTaskType RGTask::type() const
@@ -58,6 +76,16 @@ void RGTask::setGuid(const QString& guid)
 {
     m_guid = guid;
 }
+RGTaskStatus RGTask::status() const
+{
+    return m_status;
+}
+
+void RGTask::setStatus(const RGTaskStatus& status)
+{
+    m_status = status;
+}
+
 
 
 

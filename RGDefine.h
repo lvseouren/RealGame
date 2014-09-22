@@ -15,6 +15,15 @@ enum RGTaskType
     TaskType_Irrelevant
 };
 
+enum RGTaskStatus
+{
+    TaskStatus_None,
+    TaskStatus_Unfinished,
+    TaskStatus_Finished,
+    TaskStatus_Failed,
+    TaskStatus_Unknow
+};
+
 enum RGTaskCycle
 {
     TaskCycle_None,

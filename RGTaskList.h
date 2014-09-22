@@ -8,9 +8,14 @@ class RGTaskList
 {
 public:
     RGTaskList();
+    ~RGTaskList();
 
     void addTask(const RGTask& task);
     void removeTask(const QString& strGuid);
+    void removeAllTasks();
+
+    bool finishTask(const QString& strGuid);
+    bool failedTask(const QString& strGuid);
 
 private:
     QMap<QString, RGTask> m_taskMap;

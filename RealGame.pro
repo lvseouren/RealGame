@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     RGTask.cpp \
     RGTaskList.cpp \
     RGTasksOfADay.cpp \
-    RGTaskDataSource.cpp
+    RGTaskDataSource.cpp \
+    RGUtils.cpp
 
 HEADERS  += MainWindow.h \
     RGTask.h \
     RGDefine.h \
     RGTaskList.h \
     RGTasksOfADay.h \
-    RGTaskDataSource.h
+    RGTaskDataSource.h \
+    RGUtils.h
 
 FORMS    += MainWindow.ui
